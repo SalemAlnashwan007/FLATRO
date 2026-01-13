@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — FLATRO | سياسة الخصوصية</title>
+  <meta name="description" content="FLATRO Privacy Policy - Learn how we collect, use, and protect your personal information.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 20 L32 6 L58 20' fill='none' stroke='%230F2940' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 20 L10 58 L54 58 L54 20' fill='none' stroke='%230F2940' stroke-width='5' stroke-linecap='square' stroke-linejoin='miter'/%3E%3Cline x1='10' y1='34' x2='42' y2='34' stroke='%230F2940' stroke-width='5'/%3E%3Cline x1='10' y1='46' x2='36' y2='46' stroke='%230F2940' stroke-width='5'/%3E%3Cline x1='26' y1='34' x2='26' y2='58' stroke='%230F2940' stroke-width='5'/%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      --primary: #0F2940;
+      --primary-dark: #0A1E30;
+      --primary-light: #1E3A5F;
+      --primary-50: #E8EEF3;
+      --secondary: #D4A853;
+      --secondary-light: #E8C87A;
+      --secondary-dark: #B8912E;
+      --secondary-50: #FBF6EC;
+      --neutral-0: #FFFFFF;
+      --neutral-50: #FAFAFA;
+      --neutral-100: #F5F5F4;
+      --neutral-200: #E7E5E4;
+      --neutral-400: #A8A29E;
+      --neutral-500: #78716C;
+      --neutral-600: #57534E;
+      --font-en: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-ar: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --nav-height: 80px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-en);
+      background: var(--neutral-0);
+      color: var(--primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    [dir="rtl"] body { font-family: var(--font-ar); }
+    ::selection { background: var(--secondary); color: var(--primary); }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      padding: 0 clamp(24px, 5vw, 64px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 1px 0 rgba(15, 41, 64, 0.08);
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav__logo-symbol { width: 36px; height: 36px; }
+    .nav__logo-wordmark { width: 90px; height: auto; }
+
+    .nav__back {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 10px 20px;
+      border-radius: 100px;
+      transition: all 0.3s ease;
+    }
+
+    .nav__back:hover { background: var(--primary-50); }
+    .nav__back svg { width: 20px; height: 20px; }
+    [dir="rtl"] .nav__back svg { transform: scaleX(-1); }
+
+    /* Page Header */
+    .page-header {
+      padding: calc(var(--nav-height) + 60px) clamp(24px, 5vw, 64px) 60px;
+      background: var(--primary);
+    }
+
+    .page-header__container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .page-header__title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--neutral-0);
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .page-header__meta {
+      font-size: 0.9375rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Content */
+    .content {
+      padding: clamp(60px, 10vw, 80px) clamp(24px, 5vw, 64px);
+    }
+
+    .content__container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .legal-section {
+      margin-bottom: 48px;
+    }
+
+    .legal-section__title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--secondary);
+    }
+
+    .legal-section__content {
+      font-size: 1rem;
+      color: var(--neutral-600);
+      line-height: 1.8;
+    }
+
+    .legal-section__content p {
+      margin-bottom: 16px;
+    }
+
+    .legal-section__content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-section__content ul {
+      margin: 16px 0;
+      padding-left: 24px;
+    }
+
+    .legal-section__content li {
+      margin-bottom: 8px;
+    }
+
+    .legal-section__content strong {
+      color: var(--primary);
+    }
+
+    .legal-section__content a {
+      color: var(--secondary-dark);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .legal-section__content a:hover {
+      text-decoration: underline;
+    }
+
+    /* Highlight Box */
+    .highlight-box {
+      background: var(--secondary-50);
+      border-left: 4px solid var(--secondary);
+      padding: 20px 24px;
+      border-radius: 0 12px 12px 0;
+      margin: 24px 0;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0 !important;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    /* Table of Contents */
+    .toc {
+      background: var(--neutral-50);
+      border-radius: 16px;
+      padding: 24px 32px;
+      margin-bottom: 48px;
+    }
+
+    .toc__title {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--neutral-500);
+      margin-bottom: 16px;
+    }
+
+    .toc__list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .toc__list a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .toc__list a:hover {
+      color: var(--secondary-dark);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--primary-dark);
+      padding: 40px clamp(24px, 5vw, 64px);
+    }
+
+    .footer__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer__copy {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer__links a {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer__links a:hover { color: var(--secondary); }
+
+    @media (max-width: 768px) {
+      .nav__logo-wordmark { display: none; }
+      .footer__container { flex-direction: column; text-align: center; }
+      .footer__links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">
+      <svg class="nav__logo-symbol" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 20 L32 6 L58 20" fill="none" stroke="#0F2940" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 20 L10 58 L54 58 L54 20" fill="none" stroke="#0F2940" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+        <line x1="10" y1="34" x2="42" y2="34" stroke="#0F2940" stroke-width="5"/>
+        <line x1="10" y1="46" x2="36" y2="46" stroke="#0F2940" stroke-width="5"/>
+        <line x1="26" y1="34" x2="26" y2="58" stroke="#0F2940" stroke-width="5"/>
+      </svg>
+      <svg class="nav__logo-wordmark" viewBox="0 0 320 56" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 6 L6 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M6 6 L38 6" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M6 26 L30 26" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M54 6 L54 50 L86 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+        <path d="M102 50 L122 6 L142 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+        <line x1="158" y1="6" x2="198" y2="6" stroke="#0F2940" stroke-width="5" stroke-linecap="square"/>
+        <line x1="178" y1="6" x2="178" y2="50" stroke="#0F2940" stroke-width="5" stroke-linecap="square"/>
+        <path d="M214 6 L214 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M214 6 L242 6 Q254 6 254 18 Q254 30 242 30 L214 30" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M238 30 L258 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <rect x="274" y="6" width="44" height="44" rx="2" stroke="#0F2940" stroke-width="5" fill="none"/>
+      </svg>
+    </a>
+    <a href="index.html" class="nav__back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="19" y1="12" x2="5" y2="12"/>
+        <polyline points="12 19 5 12 12 5"/>
+      </svg>
+      <span>Back to Home</span>
+    </a>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="page-header__container">
+      <h1 class="page-header__title">Privacy Policy</h1>
+      <p class="page-header__meta">Last updated: January 2024</p>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="content">
+    <div class="content__container">
+      <!-- Table of Contents -->
+      <nav class="toc">
+        <h2 class="toc__title">Contents</h2>
+        <ol class="toc__list">
+          <li><a href="#introduction">1. Introduction</a></li>
+          <li><a href="#information-collected">2. Information We Collect</a></li>
+          <li><a href="#how-we-use">3. How We Use Your Information</a></li>
+          <li><a href="#sharing">4. Information Sharing</a></li>
+          <li><a href="#security">5. Data Security</a></li>
+          <li><a href="#retention">6. Data Retention</a></li>
+          <li><a href="#your-rights">7. Your Rights</a></li>
+          <li><a href="#cookies">8. Cookies and Tracking</a></li>
+          <li><a href="#changes">9. Changes to This Policy</a></li>
+          <li><a href="#contact">10. Contact Us</a></li>
+        </ol>
+      </nav>
+
+      <section id="introduction" class="legal-section">
+        <h2 class="legal-section__title">1. Introduction</h2>
+        <div class="legal-section__content">
+          <p>Welcome to FLATRO. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and services.</p>
+          <p>By using FLATRO, you agree to the collection and use of information in accordance with this policy. If you do not agree with our policies and practices, please do not use our services.</p>
+        </div>
+      </section>
+
+      <section id="information-collected" class="legal-section">
+        <h2 class="legal-section__title">2. Information We Collect</h2>
+        <div class="legal-section__content">
+          <p><strong>Personal Information:</strong> When you create an account, we collect:</p>
+          <ul>
+            <li>Full name and contact information</li>
+            <li>Email address and phone number</li>
+            <li>Civil ID or identification documents (for verification)</li>
+            <li>Profile photo (optional)</li>
+          </ul>
+
+          <p><strong>Usage Information:</strong> We automatically collect:</p>
+          <ul>
+            <li>Device information (type, operating system, unique identifiers)</li>
+            <li>Log data (access times, pages viewed, app features used)</li>
+            <li>Location data (with your permission)</li>
+            <li>Search queries and preferences</li>
+          </ul>
+
+          <p><strong>Transaction Information:</strong> For rental transactions, we collect:</p>
+          <ul>
+            <li>Payment information (processed securely by our payment partners)</li>
+            <li>Rental history and contract details</li>
+            <li>Communication records with property owners</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="how-we-use" class="legal-section">
+        <h2 class="legal-section__title">3. How We Use Your Information</h2>
+        <div class="legal-section__content">
+          <p>We use the information we collect to:</p>
+          <ul>
+            <li>Provide and maintain our services</li>
+            <li>Process your rental transactions and viewing bookings</li>
+            <li>Verify your identity and prevent fraud</li>
+            <li>Send you notifications about your bookings and account</li>
+            <li>Improve our app and develop new features</li>
+            <li>Provide customer support</li>
+            <li>Send promotional communications (with your consent)</li>
+            <li>Comply with legal obligations</li>
+          </ul>
+
+          <div class="highlight-box">
+            <p>We never sell your personal information to third parties for marketing purposes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="sharing" class="legal-section">
+        <h2 class="legal-section__title">4. Information Sharing</h2>
+        <div class="legal-section__content">
+          <p>We may share your information with:</p>
+          <ul>
+            <li><strong>Property Owners:</strong> To facilitate viewings and rental transactions</li>
+            <li><strong>Service Providers:</strong> Companies that help us operate our platform (payment processors, hosting providers, analytics services)</li>
+            <li><strong>Legal Authorities:</strong> When required by law or to protect our rights</li>
+            <li><strong>Business Transfers:</strong> In connection with any merger, acquisition, or sale of assets</li>
+          </ul>
+          <p>All third parties are contractually obligated to protect your information and use it only for the purposes we specify.</p>
+        </div>
+      </section>
+
+      <section id="security" class="legal-section">
+        <h2 class="legal-section__title">5. Data Security</h2>
+        <div class="legal-section__content">
+          <p>We implement industry-standard security measures to protect your data:</p>
+          <ul>
+            <li>Encryption of data in transit and at rest</li>
+            <li>Secure servers with regular security audits</li>
+            <li>Access controls and authentication protocols</li>
+            <li>Regular security training for our team</li>
+          </ul>
+          <p>While we strive to protect your personal information, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security but are committed to implementing the best practices in data protection.</p>
+        </div>
+      </section>
+
+      <section id="retention" class="legal-section">
+        <h2 class="legal-section__title">6. Data Retention</h2>
+        <div class="legal-section__content">
+          <p>We retain your personal information for as long as necessary to:</p>
+          <ul>
+            <li>Provide our services to you</li>
+            <li>Comply with legal obligations</li>
+            <li>Resolve disputes and enforce our agreements</li>
+          </ul>
+          <p>When you delete your account, we will delete or anonymize your personal information within 30 days, except where retention is required by law.</p>
+        </div>
+      </section>
+
+      <section id="your-rights" class="legal-section">
+        <h2 class="legal-section__title">7. Your Rights</h2>
+        <div class="legal-section__content">
+          <p>You have the right to:</p>
+          <ul>
+            <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
+            <li><strong>Correction:</strong> Request correction of inaccurate information</li>
+            <li><strong>Deletion:</strong> Request deletion of your personal data</li>
+            <li><strong>Portability:</strong> Request transfer of your data to another service</li>
+            <li><strong>Withdraw Consent:</strong> Withdraw consent for data processing where applicable</li>
+            <li><strong>Object:</strong> Object to certain types of data processing</li>
+          </ul>
+          <p>To exercise these rights, please contact us at <a href="mailto:privacy@flatro.app">privacy@flatro.app</a>.</p>
+        </div>
+      </section>
+
+      <section id="cookies" class="legal-section">
+        <h2 class="legal-section__title">8. Cookies and Tracking</h2>
+        <div class="legal-section__content">
+          <p>Our mobile app may use:</p>
+          <ul>
+            <li><strong>Analytics:</strong> To understand how users interact with our app</li>
+            <li><strong>Functional storage:</strong> To remember your preferences and settings</li>
+            <li><strong>Performance monitoring:</strong> To identify and fix technical issues</li>
+          </ul>
+          <p>You can manage tracking preferences through your device settings.</p>
+        </div>
+      </section>
+
+      <section id="changes" class="legal-section">
+        <h2 class="legal-section__title">9. Changes to This Policy</h2>
+        <div class="legal-section__content">
+          <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. For significant changes, we will provide additional notice through the app or email.</p>
+          <p>We encourage you to review this Privacy Policy periodically for any changes.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="legal-section">
+        <h2 class="legal-section__title">10. Contact Us</h2>
+        <div class="legal-section__content">
+          <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:privacy@flatro.app">privacy@flatro.app</a></li>
+            <li><strong>General Inquiries:</strong> <a href="mailto:hello@flatro.app">hello@flatro.app</a></li>
+            <li><strong>Address:</strong> Kuwait City, Kuwait</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__logo">
+        <svg viewBox="0 0 64 64" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 20 L32 6 L58 20" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 20 L10 58 L54 58 L54 20" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+          <line x1="10" y1="34" x2="42" y2="34" stroke="#FFFFFF" stroke-width="5"/>
+          <line x1="10" y1="46" x2="36" y2="46" stroke="#FFFFFF" stroke-width="5"/>
+          <line x1="26" y1="34" x2="26" y2="58" stroke="#FFFFFF" stroke-width="5"/>
+        </svg>
+      </div>
+      <p class="footer__copy">&copy; 2024 FLATRO. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

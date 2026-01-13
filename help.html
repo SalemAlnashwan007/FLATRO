@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Center — FLATRO | مركز المساعدة</title>
+  <meta name="description" content="Find answers and get support for FLATRO. Browse our help topics or contact our support team.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 20 L32 6 L58 20' fill='none' stroke='%230F2940' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 20 L10 58 L54 58 L54 20' fill='none' stroke='%230F2940' stroke-width='5' stroke-linecap='square' stroke-linejoin='miter'/%3E%3Cline x1='10' y1='34' x2='42' y2='34' stroke='%230F2940' stroke-width='5'/%3E%3Cline x1='10' y1='46' x2='36' y2='46' stroke='%230F2940' stroke-width='5'/%3E%3Cline x1='26' y1='34' x2='26' y2='58' stroke='%230F2940' stroke-width='5'/%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      --primary: #0F2940;
+      --primary-dark: #0A1E30;
+      --primary-light: #1E3A5F;
+      --primary-50: #E8EEF3;
+      --primary-100: #C5D4E2;
+      --primary-200: #9FB7CE;
+      --secondary: #D4A853;
+      --secondary-light: #E8C87A;
+      --secondary-dark: #B8912E;
+      --secondary-50: #FBF6EC;
+      --neutral-0: #FFFFFF;
+      --neutral-50: #FAFAFA;
+      --neutral-100: #F5F5F4;
+      --neutral-200: #E7E5E4;
+      --neutral-300: #D6D3D1;
+      --neutral-400: #A8A29E;
+      --neutral-500: #78716C;
+      --neutral-600: #57534E;
+      --neutral-700: #44403C;
+      --neutral-800: #292524;
+      --neutral-900: #1C1917;
+      --font-en: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-ar: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --nav-height: 80px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-en);
+      background: var(--neutral-0);
+      color: var(--primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    [dir="rtl"] body { font-family: var(--font-ar); }
+    ::selection { background: var(--secondary); color: var(--primary); }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      padding: 0 clamp(24px, 5vw, 64px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 1px 0 rgba(15, 41, 64, 0.08);
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav__logo-symbol { width: 36px; height: 36px; }
+    .nav__logo-wordmark { width: 90px; height: auto; }
+
+    .nav__actions { display: flex; align-items: center; gap: clamp(12px, 3vw, 24px); }
+
+    .nav__back {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 10px 20px;
+      border-radius: 100px;
+      transition: all 0.3s ease;
+    }
+
+    .nav__back:hover { background: var(--primary-50); }
+    .nav__back svg { width: 20px; height: 20px; }
+    [dir="rtl"] .nav__back svg { transform: scaleX(-1); }
+
+    /* Page Header */
+    .page-header {
+      padding: calc(var(--nav-height) + 60px) clamp(24px, 5vw, 64px) 60px;
+      background: linear-gradient(135deg, var(--primary-50) 0%, var(--neutral-0) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header__container {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .page-header__icon {
+      width: 80px;
+      height: 80px;
+      background: var(--secondary);
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .page-header__icon svg {
+      width: 40px;
+      height: 40px;
+      color: var(--primary);
+    }
+
+    .page-header__title {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    [dir="rtl"] .page-header__title { font-family: var(--font-ar); letter-spacing: 0; }
+
+    .page-header__subtitle {
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      color: var(--neutral-600);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Search Box */
+    .search-box {
+      max-width: 500px;
+      margin: 40px auto 0;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 18px 24px 18px 56px;
+      background: var(--neutral-0);
+      border: 2px solid var(--neutral-200);
+      border-radius: 16px;
+      font-family: inherit;
+      font-size: 1rem;
+      color: var(--primary);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 24px rgba(15, 41, 64, 0.08);
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 8px 32px rgba(212, 168, 83, 0.15);
+    }
+
+    .search-box input::placeholder {
+      color: var(--neutral-400);
+    }
+
+    .search-box__icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      color: var(--neutral-400);
+    }
+
+    [dir="rtl"] .search-box__icon {
+      left: auto;
+      right: 20px;
+    }
+
+    [dir="rtl"] .search-box input {
+      padding: 18px 56px 18px 24px;
+    }
+
+    /* Content Section */
+    .content {
+      padding: clamp(60px, 10vw, 100px) clamp(24px, 5vw, 64px);
+    }
+
+    .content__container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Help Categories */
+    .help-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .help-category {
+      background: var(--neutral-0);
+      border: 2px solid var(--neutral-200);
+      border-radius: 20px;
+      padding: 32px;
+      transition: all 0.4s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .help-category:hover {
+      border-color: var(--secondary);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(15, 41, 64, 0.1);
+    }
+
+    .help-category__icon {
+      width: 56px;
+      height: 56px;
+      background: var(--primary);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: all 0.4s ease;
+    }
+
+    .help-category:hover .help-category__icon {
+      background: var(--secondary);
+      transform: scale(1.1) rotate(-5deg);
+    }
+
+    .help-category__icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--neutral-0);
+    }
+
+    .help-category:hover .help-category__icon svg {
+      color: var(--primary);
+    }
+
+    .help-category__title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .help-category__desc {
+      font-size: 0.9375rem;
+      color: var(--neutral-600);
+      line-height: 1.6;
+    }
+
+    .help-category__count {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 16px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--secondary-dark);
+    }
+
+    .help-category__count svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Quick Answers */
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 32px;
+      letter-spacing: -0.02em;
+    }
+
+    .quick-answers {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 80px;
+    }
+
+    .quick-answer {
+      background: var(--neutral-50);
+      border-radius: 16px;
+      border: 1px solid var(--neutral-200);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .quick-answer:hover {
+      border-color: var(--secondary);
+    }
+
+    .quick-answer__question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px;
+      cursor: pointer;
+      gap: 16px;
+    }
+
+    .quick-answer__question h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 0;
+    }
+
+    .quick-answer__icon {
+      width: 32px;
+      height: 32px;
+      background: var(--neutral-200);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .quick-answer__icon svg {
+      width: 16px;
+      height: 16px;
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+
+    .quick-answer.open .quick-answer__icon {
+      background: var(--secondary);
+    }
+
+    .quick-answer.open .quick-answer__icon svg {
+      transform: rotate(180deg);
+    }
+
+    .quick-answer__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .quick-answer.open .quick-answer__content {
+      max-height: 500px;
+    }
+
+    .quick-answer__text {
+      padding: 0 24px 24px;
+      font-size: 0.9375rem;
+      color: var(--neutral-600);
+      line-height: 1.8;
+    }
+
+    /* Contact Support */
+    .support-section {
+      background: var(--primary);
+      border-radius: 24px;
+      padding: clamp(40px, 6vw, 60px);
+      text-align: center;
+    }
+
+    .support-section__title {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 700;
+      color: var(--neutral-0);
+      margin-bottom: 12px;
+    }
+
+    .support-section__text {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 500px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    .support-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .support-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 28px;
+      border-radius: 12px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .support-btn--primary {
+      background: var(--secondary);
+      color: var(--primary);
+    }
+
+    .support-btn--primary:hover {
+      background: var(--secondary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(212, 168, 83, 0.3);
+    }
+
+    .support-btn--secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--neutral-0);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .support-btn--secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .support-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--primary-dark);
+      padding: 40px clamp(24px, 5vw, 64px);
+    }
+
+    .footer__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer__copy {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer__links a {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer__links a:hover { color: var(--secondary); }
+
+    @media (max-width: 768px) {
+      .nav__logo-wordmark { display: none; }
+      .footer__container { flex-direction: column; text-align: center; }
+      .footer__links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">
+      <svg class="nav__logo-symbol" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 20 L32 6 L58 20" fill="none" stroke="#0F2940" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 20 L10 58 L54 58 L54 20" fill="none" stroke="#0F2940" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+        <line x1="10" y1="34" x2="42" y2="34" stroke="#0F2940" stroke-width="5"/>
+        <line x1="10" y1="46" x2="36" y2="46" stroke="#0F2940" stroke-width="5"/>
+        <line x1="26" y1="34" x2="26" y2="58" stroke="#0F2940" stroke-width="5"/>
+      </svg>
+      <svg class="nav__logo-wordmark" viewBox="0 0 320 56" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 6 L6 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M6 6 L38 6" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M6 26 L30 26" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M54 6 L54 50 L86 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+        <path d="M102 50 L122 6 L142 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+        <line x1="158" y1="6" x2="198" y2="6" stroke="#0F2940" stroke-width="5" stroke-linecap="square"/>
+        <line x1="178" y1="6" x2="178" y2="50" stroke="#0F2940" stroke-width="5" stroke-linecap="square"/>
+        <path d="M214 6 L214 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M214 6 L242 6 Q254 6 254 18 Q254 30 242 30 L214 30" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M238 30 L258 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <rect x="274" y="6" width="44" height="44" rx="2" stroke="#0F2940" stroke-width="5" fill="none"/>
+      </svg>
+    </a>
+    <div class="nav__actions">
+      <a href="index.html" class="nav__back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        <span data-en="Back to Home" data-ar="العودة للرئيسية">Back to Home</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="page-header__container">
+      <div class="page-header__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+      </div>
+      <h1 class="page-header__title" data-en="Help Center" data-ar="مركز المساعدة">Help Center</h1>
+      <p class="page-header__subtitle" data-en="Find answers to your questions and get the support you need. We're here to help you every step of the way." data-ar="جد إجابات لأسئلتك واحصل على الدعم الذي تحتاجه. نحن هنا لمساعدتك في كل خطوة.">Find answers to your questions and get the support you need. We're here to help you every step of the way.</p>
+
+      <div class="search-box">
+        <svg class="search-box__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" placeholder="Search for help..." data-placeholder-en="Search for help..." data-placeholder-ar="ابحث عن مساعدة...">
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="content">
+    <div class="content__container">
+      <!-- Help Categories -->
+      <div class="help-categories">
+        <a href="#" class="help-category">
+          <div class="help-category__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3 class="help-category__title" data-en="Getting Started" data-ar="البدء">Getting Started</h3>
+          <p class="help-category__desc" data-en="Learn the basics of using FLATRO to find your perfect rental property." data-ar="تعلم أساسيات استخدام فلاترو للعثور على عقارك المثالي للإيجار.">Learn the basics of using FLATRO to find your perfect rental property.</p>
+          <span class="help-category__count">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            5 articles
+          </span>
+        </a>
+
+        <a href="#" class="help-category">
+          <div class="help-category__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </div>
+          <h3 class="help-category__title" data-en="Searching & Browsing" data-ar="البحث والتصفح">Searching & Browsing</h3>
+          <p class="help-category__desc" data-en="Tips for finding the right properties using our smart search filters." data-ar="نصائح للعثور على العقارات المناسبة باستخدام فلاتر البحث الذكية.">Tips for finding the right properties using our smart search filters.</p>
+          <span class="help-category__count">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            8 articles
+          </span>
+        </a>
+
+        <a href="#" class="help-category">
+          <div class="help-category__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <h3 class="help-category__title" data-en="Booking Viewings" data-ar="حجز المعاينات">Booking Viewings</h3>
+          <p class="help-category__desc" data-en="How to schedule, manage, and cancel property viewings." data-ar="كيفية جدولة وإدارة وإلغاء معاينات العقارات.">How to schedule, manage, and cancel property viewings.</p>
+          <span class="help-category__count">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            6 articles
+          </span>
+        </a>
+
+        <a href="#" class="help-category">
+          <div class="help-category__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <path d="M9 15l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="help-category__title" data-en="Contracts & Payments" data-ar="العقود والمدفوعات">Contracts & Payments</h3>
+          <p class="help-category__desc" data-en="Everything about digital contracts and secure payment processing." data-ar="كل شيء عن العقود الرقمية ومعالجة الدفع الآمنة.">Everything about digital contracts and secure payment processing.</p>
+          <span class="help-category__count">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            10 articles
+          </span>
+        </a>
+
+        <a href="#" class="help-category">
+          <div class="help-category__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <h3 class="help-category__title" data-en="Account & Profile" data-ar="الحساب والملف الشخصي">Account & Profile</h3>
+          <p class="help-category__desc" data-en="Manage your account settings, preferences, and profile information." data-ar="إدارة إعدادات حسابك وتفضيلاتك ومعلومات ملفك الشخصي.">Manage your account settings, preferences, and profile information.</p>
+          <span class="help-category__count">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            7 articles
+          </span>
+        </a>
+
+        <a href="#" class="help-category">
+          <div class="help-category__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h3 class="help-category__title" data-en="Security & Privacy" data-ar="الأمان والخصوصية">Security & Privacy</h3>
+          <p class="help-category__desc" data-en="Learn about how we protect your data and keep your information safe." data-ar="تعرف على كيفية حماية بياناتك والحفاظ على أمان معلوماتك.">Learn about how we protect your data and keep your information safe.</p>
+          <span class="help-category__count">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            4 articles
+          </span>
+        </a>
+      </div>
+
+      <!-- Quick Answers -->
+      <h2 class="section-title" data-en="Popular Questions" data-ar="الأسئلة الشائعة">Popular Questions</h2>
+      <div class="quick-answers">
+        <div class="quick-answer">
+          <div class="quick-answer__question" onclick="toggleAnswer(this)">
+            <h3 data-en="When will FLATRO launch?" data-ar="متى سيُطلق فلاترو؟">When will FLATRO launch?</h3>
+            <div class="quick-answer__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </div>
+          </div>
+          <div class="quick-answer__content">
+            <p class="quick-answer__text" data-en="FLATRO is currently in development and will be launching soon in Kuwait. Sign up for our waitlist to be the first to know when we launch and to get early access to the app." data-ar="فلاترو حالياً قيد التطوير وسيُطلق قريباً في الكويت. سجل في قائمة الانتظار لتكون أول من يعرف عند الإطلاق وللحصول على وصول مبكر للتطبيق.">FLATRO is currently in development and will be launching soon in Kuwait. Sign up for our waitlist to be the first to know when we launch and to get early access to the app.</p>
+          </div>
+        </div>
+
+        <div class="quick-answer">
+          <div class="quick-answer__question" onclick="toggleAnswer(this)">
+            <h3 data-en="Is FLATRO free to use?" data-ar="هل فلاترو مجاني للاستخدام؟">Is FLATRO free to use?</h3>
+            <div class="quick-answer__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </div>
+          </div>
+          <div class="quick-answer__content">
+            <p class="quick-answer__text" data-en="Yes! FLATRO is completely free for renters to use. You can browse listings, book viewings, and manage your rental search without any fees. Property owners may have different pricing plans which will be announced at launch." data-ar="نعم! فلاترو مجاني تماماً للمستأجرين. يمكنك تصفح القوائم وحجز المعاينات وإدارة بحثك عن الإيجار بدون أي رسوم. قد يكون لأصحاب العقارات خطط تسعير مختلفة سيُعلن عنها عند الإطلاق.">Yes! FLATRO is completely free for renters to use. You can browse listings, book viewings, and manage your rental search without any fees. Property owners may have different pricing plans which will be announced at launch.</p>
+          </div>
+        </div>
+
+        <div class="quick-answer">
+          <div class="quick-answer__question" onclick="toggleAnswer(this)">
+            <h3 data-en="How do digital contracts work?" data-ar="كيف تعمل العقود الرقمية؟">How do digital contracts work?</h3>
+            <div class="quick-answer__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </div>
+          </div>
+          <div class="quick-answer__content">
+            <p class="quick-answer__text" data-en="Our digital contracts are legally binding documents that can be signed electronically through the app. Once both parties agree to the terms, you'll receive a digital signature request. The signed contract is stored securely and can be accessed anytime through your account." data-ar="عقودنا الرقمية هي مستندات ملزمة قانونياً يمكن توقيعها إلكترونياً من خلال التطبيق. بمجرد موافقة الطرفين على الشروط، ستتلقى طلب توقيع رقمي. يُخزن العقد الموقع بشكل آمن ويمكن الوصول إليه في أي وقت من خلال حسابك.">Our digital contracts are legally binding documents that can be signed electronically through the app. Once both parties agree to the terms, you'll receive a digital signature request. The signed contract is stored securely and can be accessed anytime through your account.</p>
+          </div>
+        </div>
+
+        <div class="quick-answer">
+          <div class="quick-answer__question" onclick="toggleAnswer(this)">
+            <h3 data-en="What areas in Kuwait does FLATRO cover?" data-ar="ما هي المناطق في الكويت التي يغطيها فلاترو؟">What areas in Kuwait does FLATRO cover?</h3>
+            <div class="quick-answer__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </div>
+          </div>
+          <div class="quick-answer__content">
+            <p class="quick-answer__text" data-en="At launch, FLATRO will cover all major areas in Kuwait City and surrounding governorates. We're continuously expanding our coverage to include more neighborhoods and property types." data-ar="عند الإطلاق، سيغطي فلاترو جميع المناطق الرئيسية في مدينة الكويت والمحافظات المحيطة. نحن نتوسع باستمرار لتشمل تغطيتنا المزيد من الأحياء وأنواع العقارات.">At launch, FLATRO will cover all major areas in Kuwait City and surrounding governorates. We're continuously expanding our coverage to include more neighborhoods and property types.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Support -->
+      <div class="support-section">
+        <h2 class="support-section__title" data-en="Still need help?" data-ar="هل تحتاج المزيد من المساعدة؟">Still need help?</h2>
+        <p class="support-section__text" data-en="Our support team is here to assist you. Reach out through any of the channels below and we'll get back to you as soon as possible." data-ar="فريق الدعم لدينا هنا لمساعدتك. تواصل معنا عبر أي من القنوات أدناه وسنرد عليك في أقرب وقت ممكن.">Our support team is here to assist you. Reach out through any of the channels below and we'll get back to you as soon as possible.</p>
+        <div class="support-buttons">
+          <a href="contact.html" class="support-btn support-btn--primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span data-en="Contact Us" data-ar="اتصل بنا">Contact Us</span>
+          </a>
+          <a href="faq.html" class="support-btn support-btn--secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span data-en="View FAQs" data-ar="عرض الأسئلة الشائعة">View FAQs</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__logo">
+        <svg viewBox="0 0 64 64" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 20 L32 6 L58 20" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 20 L10 58 L54 58 L54 20" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+          <line x1="10" y1="34" x2="42" y2="34" stroke="#FFFFFF" stroke-width="5"/>
+          <line x1="10" y1="46" x2="36" y2="46" stroke="#FFFFFF" stroke-width="5"/>
+          <line x1="26" y1="34" x2="26" y2="58" stroke="#FFFFFF" stroke-width="5"/>
+        </svg>
+      </div>
+      <p class="footer__copy">&copy; 2024 FLATRO. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
+      <div class="footer__links">
+        <a href="privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+        <a href="terms.html" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleAnswer(element) {
+      const answer = element.parentElement;
+      answer.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
