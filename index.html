@@ -6,6 +6,10 @@
   <title>FLATRO — Find Your Space | اكتشف مساحتك</title>
   <meta name="description" content="FLATRO revolutionizes property rental in Kuwait. View, book viewings, and sign contracts—all from your iPhone. Coming Soon.">
 
+  <!-- Force Light Mode -->
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light only">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +20,9 @@
 
   <style>
     :root {
+      /* Force Light Mode */
+      color-scheme: light only;
+
       /* FLATRO Brand Colors */
       --primary: #0F2940;
       --primary-dark: #0A1E30;
@@ -61,16 +68,32 @@
 
     html {
       scroll-behavior: smooth;
+      background-color: #FFFFFF;
     }
 
     body {
       font-family: var(--font-en);
       background: var(--neutral-0);
+      background-color: #FFFFFF;
       color: var(--primary);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
+    }
+
+    /* Prevent dark mode overrides on Android */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: light only;
+      }
+      html, body {
+        background-color: #FFFFFF !important;
+        color: #0F2940 !important;
+      }
+      .hero {
+        background: linear-gradient(135deg, #FAFAFA 0%, #FFFFFF 50%, #FBF6EC 100%) !important;
+      }
     }
 
     [dir="rtl"] body {
