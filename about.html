@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — FLATRO | من نحن</title>
+  <meta name="description" content="Learn about FLATRO - revolutionizing property rental in Kuwait with smart technology and seamless experiences.">
+
+  <!-- Force Light Mode -->
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light only">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 20 L32 6 L58 20' fill='none' stroke='%230F2940' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 20 L10 58 L54 58 L54 20' fill='none' stroke='%230F2940' stroke-width='5' stroke-linecap='square' stroke-linejoin='miter'/%3E%3Cline x1='10' y1='34' x2='42' y2='34' stroke='%230F2940' stroke-width='5'/%3E%3Cline x1='10' y1='46' x2='36' y2='46' stroke='%230F2940' stroke-width='5'/%3E%3Cline x1='26' y1='34' x2='26' y2='58' stroke='%230F2940' stroke-width='5'/%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      color-scheme: light only;
+      --primary: #0F2940;
+      --primary-dark: #0A1E30;
+      --primary-light: #1E3A5F;
+      --primary-50: #E8EEF3;
+      --primary-100: #C5D4E2;
+      --primary-200: #9FB7CE;
+      --secondary: #D4A853;
+      --secondary-light: #E8C87A;
+      --secondary-dark: #B8912E;
+      --secondary-50: #FBF6EC;
+      --neutral-0: #FFFFFF;
+      --neutral-50: #FAFAFA;
+      --neutral-100: #F5F5F4;
+      --neutral-200: #E7E5E4;
+      --neutral-300: #D6D3D1;
+      --neutral-400: #A8A29E;
+      --neutral-500: #78716C;
+      --neutral-600: #57534E;
+      --neutral-700: #44403C;
+      --neutral-800: #292524;
+      --neutral-900: #1C1917;
+      --font-en: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-ar: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --nav-height: 80px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; background-color: #FFFFFF; }
+    body {
+      font-family: var(--font-en);
+      background: var(--neutral-0);
+      background-color: #FFFFFF;
+      color: var(--primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    [dir="rtl"] body { font-family: var(--font-ar); }
+    ::selection { background: var(--secondary); color: var(--primary); }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      padding: 0 clamp(24px, 5vw, 64px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 1px 0 rgba(15, 41, 64, 0.08);
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav__logo-symbol { width: 36px; height: 36px; }
+    .nav__logo-wordmark { width: 90px; height: auto; }
+
+    .nav__actions { display: flex; align-items: center; gap: clamp(12px, 3vw, 24px); }
+
+    .nav__back {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 10px 20px;
+      border-radius: 100px;
+      transition: all 0.3s ease;
+    }
+
+    .nav__back:hover {
+      background: var(--primary-50);
+    }
+
+    .nav__back svg { width: 20px; height: 20px; }
+
+    [dir="rtl"] .nav__back svg { transform: scaleX(-1); }
+
+    /* Page Header */
+    .page-header {
+      padding: calc(var(--nav-height) + 60px) clamp(24px, 5vw, 64px) 60px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header__pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image: radial-gradient(circle at 2px 2px, var(--neutral-0) 1px, transparent 0);
+      background-size: 40px 40px;
+    }
+
+    .page-header__container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .page-header__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--secondary);
+      color: var(--primary);
+      padding: 10px 18px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .page-header__title {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: var(--neutral-0);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    [dir="rtl"] .page-header__title { font-family: var(--font-ar); letter-spacing: 0; }
+
+    .page-header__subtitle {
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Content Section */
+    .content {
+      padding: clamp(60px, 10vw, 100px) clamp(24px, 5vw, 64px);
+    }
+
+    .content__container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .content__section {
+      margin-bottom: 60px;
+    }
+
+    .content__section:last-child { margin-bottom: 0; }
+
+    .content__label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--secondary-dark);
+      margin-bottom: 16px;
+    }
+
+    .content__title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .content__text {
+      font-size: clamp(1rem, 1.2vw, 1.125rem);
+      color: var(--neutral-600);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .content__text:last-child { margin-bottom: 0; }
+
+    /* Values Grid */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .value-card {
+      background: var(--neutral-50);
+      border-radius: 20px;
+      padding: 32px;
+      transition: all 0.4s ease;
+      border: 1px solid var(--neutral-200);
+    }
+
+    .value-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(15, 41, 64, 0.1);
+      border-color: var(--secondary);
+    }
+
+    .value-card__icon {
+      width: 56px;
+      height: 56px;
+      background: var(--primary);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .value-card__icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--neutral-0);
+    }
+
+    .value-card__title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .value-card__desc {
+      font-size: 0.9375rem;
+      color: var(--neutral-600);
+      line-height: 1.7;
+    }
+
+    /* Team Section */
+    .team-highlight {
+      background: linear-gradient(135deg, var(--secondary-50) 0%, var(--neutral-0) 100%);
+      border-radius: 24px;
+      padding: clamp(40px, 6vw, 60px);
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .team-highlight__icon {
+      width: 80px;
+      height: 80px;
+      background: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .team-highlight__icon svg {
+      width: 40px;
+      height: 40px;
+      color: var(--primary);
+    }
+
+    .team-highlight__title {
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .team-highlight__text {
+      font-size: 1rem;
+      color: var(--neutral-600);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* CTA Section */
+    .page-cta {
+      background: var(--primary);
+      padding: clamp(60px, 10vw, 100px) clamp(24px, 5vw, 64px);
+      text-align: center;
+    }
+
+    .page-cta__container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .page-cta__title {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      color: var(--neutral-0);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .page-cta__text {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px 32px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 14px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn--secondary {
+      background: var(--secondary);
+      color: var(--primary);
+    }
+
+    .btn--secondary:hover {
+      background: var(--secondary-light);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(212, 168, 83, 0.3);
+    }
+
+    .btn svg { width: 20px; height: 20px; }
+
+    /* Footer */
+    .footer {
+      background: var(--primary-dark);
+      padding: 40px clamp(24px, 5vw, 64px);
+    }
+
+    .footer__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer__copy {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer__links a {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer__links a:hover { color: var(--secondary); }
+
+    @media (max-width: 768px) {
+      .nav__logo-wordmark { display: none; }
+      .footer__container { flex-direction: column; text-align: center; }
+      .footer__links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">
+      <svg class="nav__logo-symbol" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 20 L32 6 L58 20" fill="none" stroke="#0F2940" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 20 L10 58 L54 58 L54 20" fill="none" stroke="#0F2940" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+        <line x1="10" y1="34" x2="42" y2="34" stroke="#0F2940" stroke-width="5"/>
+        <line x1="10" y1="46" x2="36" y2="46" stroke="#0F2940" stroke-width="5"/>
+        <line x1="26" y1="34" x2="26" y2="58" stroke="#0F2940" stroke-width="5"/>
+      </svg>
+      <svg class="nav__logo-wordmark" viewBox="0 0 320 56" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 6 L6 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M6 6 L38 6" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M6 26 L30 26" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M54 6 L54 50 L86 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+        <path d="M102 50 L122 6 L142 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+        <line x1="158" y1="6" x2="198" y2="6" stroke="#0F2940" stroke-width="5" stroke-linecap="square"/>
+        <line x1="178" y1="6" x2="178" y2="50" stroke="#0F2940" stroke-width="5" stroke-linecap="square"/>
+        <path d="M214 6 L214 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M214 6 L242 6 Q254 6 254 18 Q254 30 242 30 L214 30" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <path d="M238 30 L258 50" stroke="#0F2940" stroke-width="5" fill="none" stroke-linecap="square"/>
+        <rect x="274" y="6" width="44" height="44" rx="2" stroke="#0F2940" stroke-width="5" fill="none"/>
+      </svg>
+    </a>
+    <div class="nav__actions">
+      <a href="index.html" class="nav__back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        <span data-en="Back to Home" data-ar="العودة للرئيسية">Back to Home</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="page-header__pattern"></div>
+    <div class="page-header__container">
+      <div class="page-header__badge" data-en="About Us" data-ar="من نحن">About Us</div>
+      <h1 class="page-header__title" data-en="Transforming how Kuwait rents" data-ar="نغير طريقة الإيجار في الكويت">Transforming how Kuwait rents</h1>
+      <p class="page-header__subtitle" data-en="We're building the future of property rental in Kuwait, making it simpler, faster, and more transparent for everyone." data-ar="نحن نبني مستقبل تأجير العقارات في الكويت، لجعله أبسط وأسرع وأكثر شفافية للجميع.">We're building the future of property rental in Kuwait, making it simpler, faster, and more transparent for everyone.</p>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="content">
+    <div class="content__container">
+      <section class="content__section">
+        <div class="content__label" data-en="Our Story" data-ar="قصتنا">Our Story</div>
+        <h2 class="content__title" data-en="Born from a need for change" data-ar="ولدت من الحاجة للتغيير">Born from a need for change</h2>
+        <p class="content__text" data-en="Finding a rental property in Kuwait has always been a challenging experience. Endless phone calls, scheduling conflicts, paperwork, and uncertainty. We knew there had to be a better way." data-ar="كان العثور على عقار للإيجار في الكويت دائماً تجربة صعبة. مكالمات هاتفية لا نهاية لها، تعارض في المواعيد، أوراق رسمية، وعدم يقين. كنا نعلم أنه يجب أن تكون هناك طريقة أفضل.">Finding a rental property in Kuwait has always been a challenging experience. Endless phone calls, scheduling conflicts, paperwork, and uncertainty. We knew there had to be a better way.</p>
+        <p class="content__text" data-en="FLATRO was created to revolutionize the rental experience. Our platform brings together advanced technology and local expertise to create a seamless journey from browsing to moving in. We believe everyone deserves to find their perfect space without the stress." data-ar="تم إنشاء فلاترو لإحداث ثورة في تجربة الإيجار. تجمع منصتنا بين التكنولوجيا المتقدمة والخبرة المحلية لإنشاء رحلة سلسة من التصفح إلى الانتقال. نؤمن بأن الجميع يستحق أن يجد مساحته المثالية دون توتر.">FLATRO was created to revolutionize the rental experience. Our platform brings together advanced technology and local expertise to create a seamless journey from browsing to moving in. We believe everyone deserves to find their perfect space without the stress.</p>
+      </section>
+
+      <section class="content__section">
+        <div class="content__label" data-en="Our Mission" data-ar="مهمتنا">Our Mission</div>
+        <h2 class="content__title" data-en="Making renting effortless" data-ar="جعل الإيجار سهلاً">Making renting effortless</h2>
+        <p class="content__text" data-en="Our mission is to empower renters and property owners in Kuwait with tools that make the entire rental process transparent, efficient, and enjoyable. We're committed to building trust through verified listings, secure transactions, and exceptional customer support." data-ar="مهمتنا هي تمكين المستأجرين وأصحاب العقارات في الكويت بأدوات تجعل عملية الإيجار بأكملها شفافة وفعالة وممتعة. نحن ملتزمون ببناء الثقة من خلال القوائم الموثقة والمعاملات الآمنة ودعم العملاء الاستثنائي.">Our mission is to empower renters and property owners in Kuwait with tools that make the entire rental process transparent, efficient, and enjoyable. We're committed to building trust through verified listings, secure transactions, and exceptional customer support.</p>
+      </section>
+
+      <section class="content__section">
+        <div class="content__label" data-en="Our Values" data-ar="قيمنا">Our Values</div>
+        <h2 class="content__title" data-en="What drives us forward" data-ar="ما يدفعنا للأمام">What drives us forward</h2>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title" data-en="Transparency" data-ar="الشفافية">Transparency</h3>
+            <p class="value-card__desc" data-en="Every listing is verified. Every fee is disclosed. No hidden surprises, just honest information you can trust." data-ar="كل قائمة موثقة. كل رسوم معلنة. لا مفاجآت خفية، فقط معلومات صادقة يمكنك الوثوق بها.">Every listing is verified. Every fee is disclosed. No hidden surprises, just honest information you can trust.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title" data-en="Innovation" data-ar="الابتكار">Innovation</h3>
+            <p class="value-card__desc" data-en="We leverage cutting-edge technology to solve real problems and create experiences that feel magical." data-ar="نستفيد من أحدث التقنيات لحل المشاكل الحقيقية وإنشاء تجارب تبدو سحرية.">We leverage cutting-edge technology to solve real problems and create experiences that feel magical.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title" data-en="Community" data-ar="المجتمع">Community</h3>
+            <p class="value-card__desc" data-en="We're building more than an app. We're creating a community where renters and owners connect with confidence." data-ar="نحن نبني أكثر من مجرد تطبيق. نحن نخلق مجتمعاً حيث يتواصل المستأجرون والملاك بثقة.">We're building more than an app. We're creating a community where renters and owners connect with confidence.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title" data-en="Security" data-ar="الأمان">Security</h3>
+            <p class="value-card__desc" data-en="Your data and transactions are protected with industry-leading security measures. Your trust is our priority." data-ar="بياناتك ومعاملاتك محمية بإجراءات أمنية رائدة في الصناعة. ثقتك هي أولويتنا.">Your data and transactions are protected with industry-leading security measures. Your trust is our priority.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content__section">
+        <div class="team-highlight">
+          <div class="team-highlight__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="team-highlight__title" data-en="Our Team" data-ar="فريقنا">Our Team</h3>
+          <p class="team-highlight__text" data-en="We're a passionate team of designers, engineers, and real estate enthusiasts based in Kuwait, united by our mission to transform the rental experience." data-ar="نحن فريق شغوف من المصممين والمهندسين وعشاق العقارات في الكويت، متحدون بمهمتنا لتحويل تجربة الإيجار.">We're a passionate team of designers, engineers, and real estate enthusiasts based in Kuwait, united by our mission to transform the rental experience.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- CTA Section -->
+  <section class="page-cta">
+    <div class="page-cta__container">
+      <h2 class="page-cta__title" data-en="Ready to find your space?" data-ar="مستعد للعثور على مساحتك؟">Ready to find your space?</h2>
+      <p class="page-cta__text" data-en="Be the first to know when FLATRO launches. Join our waitlist today." data-ar="كن أول من يعرف عند إطلاق فلاترو. انضم لقائمة الانتظار اليوم.">Be the first to know when FLATRO launches. Join our waitlist today.</p>
+      <a href="index.html#notify" class="btn btn--secondary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+        <span data-en="Get Notified" data-ar="أبلغني">Get Notified</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__logo">
+        <svg viewBox="0 0 64 64" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 20 L32 6 L58 20" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 20 L10 58 L54 58 L54 20" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+          <line x1="10" y1="34" x2="42" y2="34" stroke="#FFFFFF" stroke-width="5"/>
+          <line x1="10" y1="46" x2="36" y2="46" stroke="#FFFFFF" stroke-width="5"/>
+          <line x1="26" y1="34" x2="26" y2="58" stroke="#FFFFFF" stroke-width="5"/>
+        </svg>
+      </div>
+      <p class="footer__copy">&copy; 2024 FLATRO. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
+      <div class="footer__links">
+        <a href="privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+        <a href="terms.html" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
